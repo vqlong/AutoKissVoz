@@ -1,0 +1,26 @@
+﻿<Window x:Class="P3_Login_Voz.EnterCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P3_Login_Voz"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="AutoKissVoz" Height="250" Width="440"
+        ResizeMode="CanMinimize"
+        Icon="Images/beat_brick_x2.png"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource Window.MaterialDesignStyle}">
+    <UniformGrid TextBlock.FontSize="30" Rows="2">
+        <UniformGrid.Resources>
+            <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignOutlinedButton}">
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </UniformGrid.Resources>
+        <TextBox x:Name="txbCode" md:HintAssist.Hint="Enter the code from your email"/>
+        <Button x:Name="btnConfirm" Click="ButtonConfirm_Click">Confirm code</Button>
+    </UniformGrid>
+</Window>

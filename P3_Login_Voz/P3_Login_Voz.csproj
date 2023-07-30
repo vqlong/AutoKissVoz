@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <AssemblyName>AutoKissVoz</AssemblyName>
+	  <ApplicationIcon>Images/beat_brick.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\beat_brick.ico" />
+    <None Remove="Images\beat_brick_x2.png" />
+    <None Remove="Images\sweet_kiss_x2.png" />
+    <None Remove="WebpWrapper\libwebp_x64.dll" />
+    <None Remove="WebpWrapper\libwebp_x86.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="WebpWrapper\libwebp_x64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WebpWrapper\libwebp_x86.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Leaf.xNet" Version="5.2.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XLib\XLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\beat_brick.ico" />
+    <Resource Include="Images\beat_brick_x2.png" />
+    <Resource Include="Images\sweet_kiss_x2.png" />
+  </ItemGroup>
+
+</Project>

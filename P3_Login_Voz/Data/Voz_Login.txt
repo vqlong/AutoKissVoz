@@ -1,0 +1,45 @@
+voz.vn 1689449896,cde8cbef9dd9935b83de8a9c2b99f00f
+
+request login 
+https://voz.vn/login/?_xfRequestUri=%2F&_xfWithData=1&_xfToken=1689446832%2Cb08e6387a60271c106c9bd13d03cee0c&_xfResponseType=json
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+login 1689449912,d2b3ba5167ccf8e569829176cb1886fb
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+
+https://voz.vn/login/two-step?_xfRedirect=https%3A%2F%2Fvoz.vn%2F&remember=1
+login 2 step 1689449989,694233e3803910e28ec80b8a01213e46
+
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Content-Length: 146
+Content-Type: application/x-www-form-urlencoded
+Origin: https://voz.vn
+Referer: https://voz.vn/login/two-step?_xfRedirect=https%3A%2F%2Fvoz.vn%2F&remember=1
+Sec-Ch-Ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+
+POST
+https://voz.vn/login/two-step
+_xfToken=1689448099%2Ce9f98700ea6f455b5c455efac50dd40e&code=719299&trust=1&confirm=1&provider=email&remember=1&_xfRedirect=https%3A%2F%2Fvoz.vn%2F
+_xfToken: 1689448099,e9f98700ea6f455b5c455efac50dd40e
+code: 719299
+trust: 1
+confirm: 1
+provider: email
+remember: 1
+_xfRedirect: https://voz.vn/

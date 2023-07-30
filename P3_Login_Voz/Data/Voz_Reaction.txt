@@ -1,0 +1,44 @@
+profile 
+GET https://voz.vn/u/1687879/
+--------------------------------------------
+search post
+GET https://voz.vn/search/member?user_id=1233382
+response header location https://voz.vn/search/9027140/?c[users]=Le_Rachitique&o=date
+
+post address 
+GET https://voz.vn/p/26282531/
+
+link post https://voz.vn/t/my-ra-bao-cao-ve-cuoc-di-tan-hon-loan-khoi-afghanistan.802188/post-26282531
+link kiss https://voz.vn/p/26282531/react?reaction_id=1
+
+-----------------------------------------------
+kiss
+POST https://voz.vn/p/26282531/react?reaction_id=1
+_xfRequestUri=%2Ft%2Fmy-ra-bao-cao-ve-cuoc-di-tan-hon-loan-khoi-afghanistan.802188%2F&_xfWithData=1&_xfToken=1689494020%2C56b1ccd9bbd825fe7ae2c4c5db5c23d3&_xfResponseType=json
+_xfRequestUri: /t/my-ra-bao-cao-ve-cuoc-di-tan-hon-loan-khoi-afghanistan.802188/
+_xfWithData: 1
+_xfToken: 1689494020,56b1ccd9bbd825fe7ae2c4c5db5c23d3
+_xfResponseType: json
+
+thread 1689492727,c731fc4068bb88f32baf58ee039cc719
+
+form reply 1689494020,56b1ccd9bbd825fe7ae2c4c5db5c23d3
+<input type="hidden" name="_xfToken" value="1689494020,56b1ccd9bbd825fe7ae2c4c5db5c23d3">
+
+brick
+POST https://voz.vn/p/26282531/react?reaction_id=2
+_xfRequestUri=%2Ft%2Fmy-ra-bao-cao-ve-cuoc-di-tan-hon-loan-khoi-afghanistan.802188%2F&_xfWithData=1&_xfToken=1689494020%2C56b1ccd9bbd825fe7ae2c4c5db5c23d3&_xfResponseType=json
+_xfRequestUri: /t/my-ra-bao-cao-ve-cuoc-di-tan-hon-loan-khoi-afghanistan.802188/
+_xfWithData: 1
+_xfToken: 1689494020,56b1ccd9bbd825fe7ae2c4c5db5c23d3
+_xfResponseType: json
+
+
+1689512765,e8097cce1d9f7005298148fd85bc9694
+link logout
+https://voz.vn/logout/?t=1689513361%2Cfd9aaf801193efffa545625e692bebf4
+
+C\u00e2\u0300n C\u00e2\u0309u
+
+
+

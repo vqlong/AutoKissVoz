@@ -1,0 +1,71 @@
+﻿<Window x:Class="P3_Login_Voz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P3_Login_Voz"
+        mc:Ignorable="d"
+        xmlns:xctrl="clr-namespace:XLib.UserControls;assembly=XLib"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="AutoKissVoz" Height="600" Width="900"
+        ResizeMode="CanMinimize"
+        Icon="Images/beat_brick_x2.png"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource Window.MaterialDesignStyle}"
+        Closing="Window_Closing">
+    <Grid>
+        <md:Card Margin="10">
+            <UniformGrid TextBlock.FontSize="30" Columns="2">
+                <UniformGrid.Resources>
+                    <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignOutlinedButton}">
+                        <Setter Property="Margin" Value="10"/>
+                    </Style>
+                    <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+                        <Setter Property="Margin" Value="10"/>
+                        <Setter Property="md:TextFieldAssist.HasClearButton" Value="True"/>
+                    </Style>
+                </UniformGrid.Resources>
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="txblWaitForAWhite" HorizontalAlignment="Center" Margin="10">Only senior can react</TextBlock>
+                    <UniformGrid Columns="2" Height="250">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top" x:Name="txblUsername" HorizontalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                            <Image x:Name="imgUserAvatar" Width="192" Stretch="None"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top" x:Name="txblMemberName" HorizontalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                            <Image x:Name="imgMemberAvatar" Width="192" Stretch="None"/>
+                        </DockPanel>
+                    </UniformGrid>
+                    <ToggleButton x:Name="btnIsBrick" Checked="btnIsBrick_Checked" Unchecked="btnIsBrick_Unchecked" Width="80" Height="80" Background="Transparent" ToolTip="Reaction" Style="{StaticResource MaterialDesignActionToggleButton}" Margin="10">
+                        <Image Source="Images/sweet_kiss_x2.png" Width="60"/>
+                        <md:ToggleButtonAssist.OnContent>
+                            <Image Source="Images/beat_brick_x2.png" Width="60"/>
+                        </md:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+                    <TextBlock HorizontalAlignment="Center" Margin="10">React <Run x:Name="runTotalReactions">0</Run> / <Run x:Name="runTotalPosts">0</Run> Posts</TextBlock>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <TextBox x:Name="txbUsername" md:HintAssist.Hint="Username" Text=""/>
+                    <PasswordBox x:Name="pwbPassword"  md:HintAssist.Hint="Password" md:TextFieldAssist.HasClearButton="True" Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}" Margin="10"/>
+                    <Button x:Name="btnLogin" Click="ButtonLogin_Click" IsEnabled="True">Login</Button>
+                    <TextBox x:Name="txbUserId" md:HintAssist.Hint="User Id" Text=""/>
+                    <CheckBox x:Name="ckbContinueSearch" Content="Continue search" FontSize="16" IsChecked="True" Checked="ckbContinueSearch_Checked" Unchecked="ckbContinueSearch_Unchecked" Margin="10 0 0 0"/>
+                    <Button x:Name="btnSearchPost" Click="ButtonSearchPost_Click" IsEnabled="false">Search</Button>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel.Resources>
+                            <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
+                                
+                            </Style>
+                        </StackPanel.Resources>
+                        <xctrl:NumericUpDown x:Name="nmDelay" Value="200" ValueChanged="nmDelay_ValueChanged" Width="200" Height="30" FontSize="16" VerticalContentAlignment="Bottom" CornerRadius="5" Margin="10 0 10 0"/>
+                        <TextBlock FontSize="16" Foreground="{Binding ElementName=btnSearchPost, Path=Foreground}" VerticalAlignment="Center">Delay (in ms)</TextBlock>
+                    </StackPanel>
+                    <Button x:Name="btnStartReact" Click="ButtonStartReact_Click" IsEnabled="false">Start</Button>
+                    <!--<Button x:Name="btnTestReact" Click="ButtonTestReact_Click" >React</Button>-->
+
+                </StackPanel>
+            </UniformGrid>
+        </md:Card>
+    </Grid>
+</Window>
